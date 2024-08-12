@@ -1,0 +1,49 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "src": "/gallery/galeria1.jpg",
+            "title": "Fondo: Formacion"
+        },
+        {
+            "id": 2,
+            "src": "/gallery/galeria2.jpg",
+            "title": "Fondo: Primaria"
+        },
+        {
+            "id": 3,
+            "src": "/gallery/galeria3.jpg",
+            "title": "Fondo: Cancha de futbol"
+        },
+        {
+            "id": 4,
+            "src": "/gallery/galeria4.jpg",
+            "title": "Fondo: Patio"
+        },
+        {
+            "id": 5,
+            "src": "/gallery/galeria5.jpg",
+            "title": "Fondo: Bachillerato dretas"
+        },
+        {
+            "id": 9,
+            "src": "/gallery/galeria9.png",
+            "title": "Fondo: Entrega de boletines"
+        },
+        {
+            "id": 6,
+            "src": "/gallery/galeria6.jpg",
+            "title": "Fondo: Bachillerato delante"
+        },
+        {
+            "id": 7,
+            "src": "/gallery/galeria7.jpg",
+            "title": "Fondo: Cancha-Bachillerato"
+        },
+        {
+            "id": 8,
+            "src": "/gallery/galeria8.jpg",
+            "title": "Fondo: Primaria aerea"
+        }
+    ]
+}

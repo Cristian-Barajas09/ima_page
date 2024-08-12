@@ -1,0 +1,22 @@
+---
+import Gallery from '@components/gallery/Gallery.astro';
+import Layout from '@layouts/Layout.astro';
+import MapComponent from '@components/index/MapComponent.astro'
+import Contact from '@components/index/Contact.astro';
+import InformationComponent from '@components/index/InformationComponent.astro'
+import LevelComponent from '@components/index/LevelComponent.astro';
+import InitComponent from '@components/index/InitComponent.astro';
+---
+
+<Layout title="Inicio">
+	<div class="w-full">
+		<InitComponent />
+		<LevelComponent />
+		<Gallery />
+		<InformationComponent />
+		<div class="lg:flex lg:items-center lg:justify-center lg:gap-10">
+			<Contact/>
+			<MapComponent />
+		</div>
+	</div>
+</Layout>

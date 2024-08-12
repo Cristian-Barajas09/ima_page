@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+    image: {
+        id: number
+        src: string
+        title: string
+    }
+}
+
+const { image } = Astro.props
+---
+
+<a href={`/gallery/${image.id}`} transition:name={`gallery-item-${image.id}`} class="w-64">
+    <Image
+        src={image.src}
+        alt={image.title}
+        width={300}
+        height={300}
+        loading="eager"
+        class="w-full h-full hover:shadow-none shadow-2xl hover:scale-95 transition-all duration-200 rounded"
+    />
+</a>

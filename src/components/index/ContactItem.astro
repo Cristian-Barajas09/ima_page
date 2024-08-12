@@ -1,0 +1,18 @@
+---
+
+interface Props {
+    value: string
+    iconStyle: string
+}
+
+const {value,iconStyle} = Astro.props
+---
+
+<div class="flex flex-col lg:flex-row lg:justify-center items-center gap-4 m-4 p-2">
+    <span class={iconStyle}>
+        <slot />
+    </span>
+    <span>
+        <p>{value}</p>
+    </span>
+</div>

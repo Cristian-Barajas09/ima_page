@@ -1,0 +1,33 @@
+---
+import PhoneIcon from "@components/icons/PhoneIcon.svelte";
+import GmailIcon from "@components/icons/GmailIcon.svelte";
+import ContactItem from "./ContactItem.astro";
+
+const contactInfo = [
+    {
+        value: "0276-3413383 / 0412-7715693",
+        icon: PhoneIcon,
+        iconStyle: "text-4xl text-green-500"
+    },
+    {
+        value: "imaadventista@gmail.com",
+        icon:  GmailIcon,
+        iconStyle: "text-4xl text-red-500"
+    }
+];
+---
+
+<section class="m-2">
+    <div>
+        <h2 class="text-center text-2xl font-bold">Contactanos</h2>
+    </div>
+    <div>
+        {
+            contactInfo.map((contact) => (
+                <ContactItem value={contact.value} iconStyle={contact.iconStyle}>
+                    <contact.icon/>
+                </ContactItem>
+            ))
+        }
+    </div>
+</section>

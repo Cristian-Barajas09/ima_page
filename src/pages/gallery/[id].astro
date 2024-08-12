@@ -1,0 +1,53 @@
+---
+import type { GetStaticPaths } from "astro";
+import {images} from '../../data/gallery.json';
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ArrowLeftIcon from "@components/icons/ArrowLeftIcon.svelte";
+export const getStaticPaths = (() => {
+    
+    return images.map((image) => {
+        return {
+            params: {
+                id: image.id
+            }
+        }
+    });
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+
+const image = images.find((image) => image.id === Number(id));
+---
+
+<Layout title={`image ${image?.id}`}>
+    <div class="flex">
+        <div>
+            <div class="w-full p-2">
+                <a href="/" class="flex gap-2">
+                    <ArrowLeftIcon class="w-6 h-6" client:load />
+                    volver
+                </a>
+            </div>
+            {
+                image && (
+                    <div class="flex justify-center p-2">
+                        <Image
+                            src={image.src}
+                            alt={image.title}
+                            width={300}
+                            height={300}
+                            loading="eager"
+                            class="w-full h-[25rem] object-cover rounded"
+                            transition:name={`gallery-item-${image.id}`}
+                        />
+                    </div>
+                )
+            }
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</Layout>
+

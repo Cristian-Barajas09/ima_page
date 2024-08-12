@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+const informationItems = [
+  {
+    title: "Acuerdos",
+    images: "/imgs/acuerdos.png",
+  },
+  {
+    title: "Pagos",
+    images: "/imgs/pagos.png",
+  },
+];
+---
+
+<div class="m-2 p-4 flex flex-col justify-center items-center">
+  <h2 class="text-center text-2xl font-bold">Información</h2>
+  <div class="flex flex-col md:flex-row lg:flex-row w-3/4">
+    {
+      informationItems.map((item) => (
+        <div class="m-2 w-full shadow-md">
+          <Image
+            src={item.images}
+            alt={item.title},
+            width={300},
+            height={300},
+            class="w-full h-full rounded object-cover"
+            loading="lazy"
+          />
+        </div>
+      ))
+    }
+    <div class="m-2 w-full flex flex-col gap-2">
+      <h3 class="text-center bg-red-500 p-2 text-white">
+        Cuenta Bancaria Única Banco Bicentenario
+      </h3>
+      <div class="flex flex-col text-center rounded border-red-500 border">
+        <strong>0175-0001-5100-7129-6431</strong>
+        <p>U.E. INSTITUTO METROPOLITANO ADVENTISTA</p>
+        <p>RIF-J31521904-2</p>
+        <p>
+          <strong>
+            NOTA: ENVIAR COMPROBANTE DE TRANSFERENCIA A: WHATSAPP: 0412-7715693
+            Ó IMA.ADVENTISTA@GMAIL.COM Con los datos del estudiante (Apellidos,
+            Nombres, Grado ó Año)
+          </strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
